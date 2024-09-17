@@ -296,7 +296,7 @@ vespa:
   image:
     repository: vespa
     pullPolicy: IfNotPresent
-    tag: "8.409.18"
+    tag: "8.277.17"
   podAnnotations: {}
   podLabels:
     app: vespa
