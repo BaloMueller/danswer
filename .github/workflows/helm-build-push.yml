@@ -39,7 +39,7 @@ jobs:
         uses: helm/chart-releaser-action@v1.6.0
         with:
           charts_dir: deployment/helm/charts
-          pages_branch: helm-publish
+          pages_branch: smueller-dev
           skip_existing: true
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
