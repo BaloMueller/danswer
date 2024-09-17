@@ -80,7 +80,7 @@ postgresql:
   primary:
     persistence:
       size: 5Gi
-  enabled: true
+  enabled: false
   auth:
     existingSecret: danswer-secrets
     secretKeys:
