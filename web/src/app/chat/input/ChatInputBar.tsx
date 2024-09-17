@@ -34,7 +34,6 @@ import { Hoverable } from "@/components/Hoverable";
 import { SettingsContext } from "@/components/settings/SettingsProvider";
 import { ChatState } from "../types";
 import UnconfiguredProviderText from "@/components/chat_search/UnconfiguredProviderText";
-import { useSearchContext } from "@/components/context/SearchContext";
 
 const MAX_INPUT_HEIGHT = 200;
 
@@ -550,6 +549,7 @@ export function ChatInputBar({
                 tab
                 content={(close, ref) => (
                   <LlmTab
+                    currentAssistant={alternativeAssistant || selectedAssistant}
                     openModelSettings={openModelSettings}
                     currentLlm={
                       llmOverrideManager.llmOverride.modelName ||
