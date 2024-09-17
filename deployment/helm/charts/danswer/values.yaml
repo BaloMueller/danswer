@@ -288,6 +288,7 @@ background:
 
   nodeSelector: {}
   tolerations: []
+  
 
 vespa:
   enabled: true
@@ -295,7 +296,7 @@ vespa:
   image:
     repository: vespa
     pullPolicy: IfNotPresent
-    tag: "8.277.17"
+    tag: "8.409.18"
   podAnnotations: {}
   podLabels:
     app: vespa
@@ -306,8 +307,10 @@ vespa:
     # fsGroup: 2000
 
   securityContext:
-    privileged: true
-    runAsUser: 0
+    runAsUser: 1000
+
+  service:
+    type: ClusterIP
 
   resources:
   # The Vespa Helm chart specifies default resources, which are quite modest. We override
